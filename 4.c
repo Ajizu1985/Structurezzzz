@@ -6,8 +6,7 @@ struct Publish {
   char name[100];
   char author[100];
   int pages;
-  int year;
-};
+  int year; };
 
 int main() {
     
@@ -97,9 +96,9 @@ int main() {
     scanf("%d", &z);
     
     for(int i=0; i<15; i++){
-    if((strcmp(book[i].author, y)) && (book[i].year<z)){
-    {
-   printf("Publication of %s before %d\n", book[i].author, book[i].year);
+    if(strstr(book[i].author, y)) {    
+        if (book[i].year<z){
+   printf("Publication of %s in %d\n", book[i].author, book[i].year);
   }
     }
     }
