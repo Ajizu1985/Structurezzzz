@@ -36,7 +36,7 @@ int main()
 
      for(i=0; i<3; i++){
         if(strcmp(record[i].surname, n)==0) {
-            printf(" Phone number of %s is: %s\n\n", record[i].surname, record[i].number);
+            printf("Phone number of %s is: %s\n\n", record[i].surname, record[i].number);
         }
      }
 
