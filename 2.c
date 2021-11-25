@@ -1,35 +1,44 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
-
-struct list {
-  char surname[50];
-  char name[50];
-  char number[50];
+ 
+struct employee 
+{
+     char name[30];
+     char surname[30];
+     char number[100];
 };
+ 
+int main() 
+{
+     int i, j;
+     char n[100];
+     struct employee record[3];
+ 
+     // 1st employee's record
+    
+     strcpy(record[0].name, "Aziz");
+     strcpy(record[0].surname, "Abdullaev");
+     strcpy(record[0].number, "998992058693");
+ 
+     // 2nd employee's record         
+     
+     strcpy(record[1].name, "Jahongir");
+     strcpy(record[1].surname, "Karimov");
+     strcpy(record[1].number, "998901287945");
+ 
+     // 3rd employee's record
+     strcpy(record[2].name, "Sarvar");
+     strcpy(record[2].surname, "Zahidov");
+     strcpy(record[2].number, "998914578212");
 
-int main() {
-    
-    int n=3;
-    struct list surname[n];
-    
-    
-    strcpy(surname[0].surname, "Abdullaev");
-    strcpy(surname[0].name, "Aziz");
-    strcpy(surname[0].number, "+99899-5674567");
+    printf("Enter surname of employee: \n");
+    scanf("%s", n);
 
-    strcpy(surname[1].surname, "Karimov");
-    strcpy(surname[1].name, "Jakhangir");
-    strcpy(surname[1].number, "+99891-4563567");
+     for(i=0; i<3; i++){
+        if(strcmp(record[i].surname, n)==0) {
+            printf(" Phone number of %s is: %s\n\n", record[i].surname, record[i].number);
+        }
+     }
 
-    strcpy(surname[2].surname, "Zakhidov");
-    strcpy(surname[2].name, "Sarvar");
-    strcpy(surname[2].number, "+99891-4583436");
-    
-    for(int i=0; i<n; i++){
-        printf("Enter surname: ");
-        fgets(surname, sizeof(surname), stdin);
-    printf("Phone number: %s\n", surname[i].number);
-  }
-  return 0;
+     return 0;
 }
