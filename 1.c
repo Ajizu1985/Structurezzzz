@@ -23,7 +23,7 @@ int main() {
     strcpy(list[0].name, "Dilshod");
     list[0].Math = 5;
     list[0].Macroeconomics = 5;
-    list[0].IT = 4;
+    list[0].IT = 5;
     list[0].Microeconomics = 5;
     list[0].average_marks = ((list[0].Math) + (list[0].Macroeconomics) + (list[0].IT) + (list[0].Microeconomics))/4;
 
@@ -54,11 +54,11 @@ int main() {
     list[3].Microeconomics = 5;
     list[3].average_marks = ((list[3].Math) + (list[3].Macroeconomics) + (list[3].IT) + (list[3].Microeconomics))/4;
 
-    printf("Student id: ");
+    printf("Mark: ");
     scanf("%d", &y);
 
     for(int i=0; i<4; i++){
-        if(list[i].id==y) {
+        if(list[i].average_marks==y) {
     printf("Surname: %s\n", list[i].surname);
     printf("Name: %s\n", list[i].name);
     printf("Average marks: %f\n", list[i].average_marks);
