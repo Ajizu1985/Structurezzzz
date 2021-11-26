@@ -11,7 +11,7 @@ struct Car {
 
 int main() {
     
-    struct Car features[15];
+    struct Car features[4];
     char y[100], z[100], x[100];
     
     strcpy(features[0].color, "White");
